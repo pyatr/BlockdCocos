@@ -22,6 +22,7 @@ export class Block extends Component {
 
     start() {
         this.node.on(Node.EventType.MOUSE_UP, () => this.onClick(), this);
+        this.node.on(Node.EventType.TOUCH_END, () => this.onClick(), this);
     }
 
     isSimilar(otherBlock: Block): boolean {
